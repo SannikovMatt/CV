@@ -1,21 +1,33 @@
-body{
-
+body {
     height: 100vh;
 }
 
 .container {
     margin: 0 auto;
-   
     max-width: 700px;
     padding: 7%;
 }
 
-
-p{
-    margin:0;
+p {
+    margin: 0;
     padding: 0;
 }
 
+a {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 1;
+}
+a:visited{
+    text-decoration: none;
+}
 .my_name {
     display: flex;
     flex-direction: row;
@@ -38,12 +50,11 @@ p.surname {
     margin-left: 1%;
 }
 
-.my_direction{
-
+.my_direction {
     display: flex;
 }
-.skills__description{
 
+.skills__description {
     font-size: 1.2rem;
 }
 
@@ -57,21 +68,20 @@ p.surname {
     flex: 0 0 60%;
 }
 
-
-.contacts{
-    flex: 0 0 40%;  
+.contacts {
+    flex: 0 0 40%;
     font-family: -webkit-pictograph;
     color: #737373;
     margin-left: 1%;
 }
-.contacts img{
 
+.contacts img {
     width: 15px;
 }
+
 .skills {
     display: flex;
     margin: 15% 0;
-   
 }
 
 .skills__description {
@@ -93,7 +103,7 @@ p.surname {
 }
 
 .tabulation {
-    flex: 0 0 15%; 
+    flex: 0 0 15%;
     height: 8px;
     background-color: #3873b2;
     width: 100px;
@@ -139,7 +149,6 @@ p.surname {
 }
 
 .left__side p {
-
     text-align: right;
 }
 
