@@ -1,0 +1,144 @@
+.container {
+    margin: 0 auto;
+   
+    max-width: 700px;
+    padding: 7%;
+}
+
+
+p{
+    margin:0;
+    padding: 0;
+}
+
+.my_name {
+    display: flex;
+    flex-direction: row;
+}
+
+p.name {
+    font-size: 25px;
+    flex: 0 0 80%;
+    text-align: right;
+    font-family: -webkit-pictograph;
+    color: #b9b9b9;
+    font-weight: 600;
+}
+
+p.surname {
+    flex: 0 0 20%;
+    font-size: 25px;
+    font-family: -webkit-pictograph;
+    color: #737373;
+    margin-left: 1%;
+}
+
+.my_direction{
+
+    display: flex;
+}
+.skills__description{
+
+    font-size: 1.2rem;
+}
+
+.direction {
+    font-size: 25px;
+    text-align: right;
+    font-family: -webkit-pictograph;
+    color: #b9b9b9;
+    font-weight: 500;
+    font-style: italic;
+    flex: 0 0 60%;
+}
+
+
+.contacts{
+    flex: 0 0 40%;  
+    font-family: -webkit-pictograph;
+    color: #737373;
+    margin-left: 1%;
+}
+.contacts img{
+
+    width: 15px;
+}
+.skills {
+    display: flex;
+    margin: 15% 0;
+   
+}
+
+.skills__description {
+    font-family: -webkit-pictograph;
+}
+
+.about__me__info {
+    margin-top: 30px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.head {
+    display: flex;
+}
+
+.tabulation {
+    flex: 0 0 15%; 
+    height: 8px;
+    background-color: #3873b2;
+    width: 100px;
+    display: flex;
+    margin-right: 2%;
+    align-self: center;
+}
+
+.title {
+    color: #3873b2;
+    font-size: 20px;
+    flex: 0 0 80%;
+}
+
+/*.title::before{
+
+    content: " ";
+    height: 40%;
+    background-color: #3873b2;
+    width: 100px;
+    display: inline-block;
+   margin-right: 5px;
+}*/
+
+.section__body {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.block__item {
+    display: flex;
+    margin-top: 5px;
+}
+
+.left__side {
+    display: flex;
+    flex: 0 0 15%;
+    justify-content: flex-end;
+    /* align-items: center; */
+    display: flex;
+    margin-right: 2%;
+}
+
+.left__side p {
+
+    text-align: right;
+}
+
+.right__side {
+    flex: 0 0 80%;
+    align-self: center;
+}
