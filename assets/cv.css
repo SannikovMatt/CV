@@ -2,7 +2,7 @@
     margin: 0 auto;
    
     max-width: 700px;
-    padding: 7%;
+    padding: 3% 7% 7%;
 }
 
 
@@ -14,11 +14,19 @@ p{
 .my_name {
     display: flex;
     flex-direction: row;
+    align-items: baseline;
+}
+
+p.location {
+    flex: 1 1 auto;
+    font-family: -webkit-pictograph;
+    color: #737373;
+    font-size: 14px;
 }
 
 p.name {
     font-size: 25px;
-    flex: 0 0 80%;
+    flex: 0 0 auto;
     text-align: right;
     font-family: -webkit-pictograph;
     color: #b9b9b9;
@@ -26,7 +34,7 @@ p.name {
 }
 
 p.surname {
-    flex: 0 0 20%;
+    flex: 0 0 auto;
     font-size: 25px;
     font-family: -webkit-pictograph;
     color: #737373;
@@ -36,6 +44,8 @@ p.surname {
 .my_direction{
 
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 .skills__description{
 
@@ -49,15 +59,22 @@ p.surname {
     color: #b9b9b9;
     font-weight: 500;
     font-style: italic;
-    flex: 0 0 60%;
+    flex: 0 0 auto;
+    margin-left: auto;
 }
 
 
 .contacts{
-    flex: 0 0 40%;  
+    flex: 1 1 auto;
     font-family: -webkit-pictograph;
     color: #737373;
-    margin-left: 1%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 14px;
 }
 .contacts img{
 
@@ -65,7 +82,7 @@ p.surname {
 }
 .skills {
     display: flex;
-    margin: 15% 0;
+    margin: 6% 0;
    
 }
 
@@ -88,7 +105,7 @@ p.surname {
 }
 
 .tabulation {
-    flex: 0 0 15%; 
+    flex: 0 0 20%; 
     height: 8px;
     background-color: #3873b2;
     width: 100px;
@@ -100,7 +117,7 @@ p.surname {
 .title {
     color: #3873b2;
     font-size: 20px;
-    flex: 0 0 80%;
+    flex: 0 0 75%;
 }
 
 /*.title::before{
@@ -121,12 +138,12 @@ p.surname {
 
 .block__item {
     display: flex;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .left__side {
     display: flex;
-    flex: 0 0 15%;
+    flex: 0 0 20%;
     justify-content: flex-end;
     /* align-items: center; */
     display: flex;
@@ -139,6 +156,116 @@ p.surname {
 }
 
 .right__side {
-    flex: 0 0 80%;
+    flex: 0 0 75%;
     align-self: center;
+}
+
+.right__side ul {
+    margin: 8px 0 0;
+    padding-left: 17px;
+}
+
+.right__side li {
+    margin-bottom: 4px;
+}
+
+
+/* ---------------- print / PDF ---------------- */
+
+@page {
+    size: A4;
+    margin: 13mm 15mm;
+}
+
+@media print {
+
+    body {
+        background: #fff;
+        font-size: 9.2pt;
+        line-height: 1.28;
+    }
+
+    .container {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    p.name,
+    p.surname {
+        font-size: 20pt;
+    }
+
+    p.location,
+    .contacts {
+        font-size: 8.6pt;
+    }
+
+    .contacts {
+        gap: 3px;
+    }
+
+    .direction {
+        font-size: 13pt;
+    }
+
+    .title {
+        font-size: 12pt;
+    }
+
+    .skills {
+        margin: 8px 0;
+    }
+
+    .skills__description {
+        font-size: 9.4pt;
+    }
+
+    .about__me__info {
+        margin-top: 12px;
+    }
+
+    .block {
+        margin-top: 9px;
+        break-inside: auto;
+    }
+
+    .section__body {
+        margin-top: 8px;
+    }
+
+    .block__item {
+        margin-top: 5px;
+    }
+
+    .right__side ul {
+        margin-top: 5px;
+    }
+
+    .right__side li {
+        margin-bottom: 2px;
+    }
+
+    .tabulation {
+        height: 6px;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* keep an entry from being split across two pages */
+    .block__item,
+    .head {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .head {
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }

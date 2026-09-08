@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dmitriy Sannikov — Senior Software Engineer</title>
     <link rel="stylesheet" href="./assets/cv.css">
 </head>
 
@@ -16,31 +16,27 @@
 
         <div class="header">
             <div class="my_name">
+                <p class="location">Prague, Czech Republic &mdash; remote</p>
                 <p class="name">Dmitriy</p>
                 <p class="surname">Sannikov</p>
             </div>
             <hr>
             <div class="my_direction">
-                <div class="contacts">
-                    <ul>
-
-                        <p> <img src="./assets/telephone.png"> +420 77 625 70 19</p>
-                        <p> <img src="./assets/envelope.png"> sannikov.matt@gmail.com</p>
-
-                    </ul>
-                </div>
-                <p class="direction"> Javascript Frontend Developer</p>
+                <ul class="contacts">
+                    <li><img src="./assets/telephone.png" alt="Phone"> +420 608 767 548</li>
+                    <li><img src="./assets/envelope.png" alt="Email"> sannikov.matt@gmail.com</li>
+                </ul>
+                <p class="direction">Senior Software Engineer</p>
             </div>
         </div>
 
-
         <section class="skills">
             <p class="skills__description">
-                Skilled Javascript Frontend Developer. Passionate about well structured and clean, reusable code, who
-                follows trends and news of web development. Eager to learn and improve myself.
-                Team Worker.
-                I enjoy coding, it is hard to distract me for something else.
-
+                Senior engineer building DeFi infrastructure &mdash; swap routing and aggregation,
+                automated on-chain execution &mdash; and the front ends that sit on top of it. Six years
+                in software: three and a half delivering enterprise projects in consultancy teams, then a
+                year and a half on protocol systems, end to end. AI-assisted development is a core part of
+                how I build, primarily with Claude Code and Codex.
             </p>
         </section>
 
@@ -57,23 +53,68 @@
 
                     <div class="block__item">
                         <div class="left__side">
-                            <p>Programming
-                                languages</p>
+                            <p>Languages</p>
                         </div>
                         <div class="right__side">
                             <p>
-                                JavaScript, TypeScript
+                                TypeScript, JavaScript, Solidity, Rust
                             </p>
 
                         </div>
                     </div>
                     <div class="block__item">
                         <div class="left__side">
-                            <p>Java Script Libraries</p>
+                            <p>Protocols</p>
                         </div>
                         <div class="right__side">
                             <p>
-                                React, Redux, NextJs
+                                Uniswap v2/v3/v4 and hooks, DEX aggregation and route optimisation
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="block__item">
+                        <div class="left__side">
+                            <p>Infrastructure</p>
+                        </div>
+                        <div class="right__side">
+                            <p>
+                                EVM internals, self-hosted nodes, multi-chain RPC, automated on-chain
+                                execution, transaction batching and multicall
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="block__item">
+                        <div class="left__side">
+                            <p>Data</p>
+                        </div>
+                        <div class="right__side">
+                            <p>
+                                The Graph (subgraphs), on-chain event indexing
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="block__item">
+                        <div class="left__side">
+                            <p>Backend</p>
+                        </div>
+                        <div class="right__side">
+                            <p>
+                                Node.js, Bun, PostgreSQL, Convex, AWS S3, Railway
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="block__item">
+                        <div class="left__side">
+                            <p>Frontend</p>
+                        </div>
+                        <div class="right__side">
+                            <p>
+                                React, Next, TanStack ecosystem (Query, Router, Start, Table, Form),
+                                Zustand, Redux, data-heavy dashboards and charting
                             </p>
 
                         </div>
@@ -84,7 +125,20 @@
                         </div>
                         <div class="right__side">
                             <p>
-                                Git, Webpack, Sass, ES6+, NodeJs(Npm), Babel, Bootstrap, Material UI
+                                Git, AI-assisted development (Claude Code, Codex), technical scoping and
+                                estimation, technical interviewing, leading teams of 2&ndash;5,
+                                client-facing delivery
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="block__item">
+                        <div class="left__side">
+                            <p>Certification</p>
+                        </div>
+                        <div class="right__side">
+                            <p>
+                                Microsoft Certified: Azure Administrator Associate (AZ-104)
                             </p>
 
                         </div>
@@ -94,32 +148,101 @@
             </section>
 
 
-
-            <section class="block  pet__projects">
+            <section class="block  experience">
 
                 <div class="head">
                     <div class="tabulation"></div>
-                    <div class="title">Projects</div>
+                    <div class="title">Experience</div>
                 </div>
 
                 <div class="section__body">
 
                     <div class="block__item">
                         <div class="left__side">
-                            <p>Planio </p>
+                            <p>May 2025 &ndash; present</p>
                         </div>
                         <div class="right__side">
-                            <p> Task and inventory management system.</br>
-                                Fronted is implemented with React, Redux, Material UI. Running on Docker</p>
-                    
+                            <p>
+                                <b>Neovate Digital s.r.o.</b>
+                            </p>
+
+                            <p>
+                                Position: Lead Engineer
+                            </p>
+
+                            <p>
+                                <i>Founding team member. Client names are private &mdash; happy to go
+                                    through the systems in detail in conversation.</i>
+                            </p>
+
+                            <ul>
+                                <li><b>Swap routing.</b> Traced a persistent output gap against Uniswap to
+                                    the split-optimisation algorithm, not to config or missing pools.
+                                    Route quality measured in basis points, per pair.</li>
+                                <li><b>Node infrastructure.</b> Ran nodes in-house for RPC rather than relying on
+                                    third-party providers &mdash; control over rate limits,
+                                    gas caps and response sizes, chain by chain.</li>
+                                <li><b>Automated on-chain execution.</b> Condition-triggered transactions
+                                    submitted through managed relays: batched execution of multiple calls,
+                                    nonce and gas-price handling, retry on revert or timeout, and recovery
+                                    when a batch fails part-way.</li>
+                                <li><b>Frontend.</b> React and TypeScript: portfolio allocation and
+                                    trade-reporting dashboards.</li>
+                            </ul>
+
                         </div>
                     </div>
 
-        
-                    
-                 
+                    <div class="block__item">
+                        <div class="left__side">
+                            <p>Jan 2022 &ndash; May 2025</p>
+                        </div>
+                        <div class="right__side">
+                            <p>
+                                <b>FirstLine Software</b>
+                            </p>
 
+                            <p>
+                                Position: Senior Developer
+                            </p>
 
+                            <p>
+                                <i>Joined as a developer, promoted to Senior.</i>
+                            </p>
+
+                            <ul>
+                                <li><b>Invoice workflow platform</b> for an accounting company: document
+                                    processing and approval routing.</li>
+                                <li><b>Factory IoT dashboards</b> with real-time shop-floor telemetry.</li>
+                                <li><b>Insurance client systems.</b></li>
+                                <li>Scoped and estimated incoming projects; led teams of 2&ndash;5 engineers.</li>
+                                <li>Ran technical hiring interviews for developer candidates.</li>
+                                <li>Consultancy model &mdash; several clients at once, client-facing from
+                                    first scoping call through delivery.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <div class="block__item">
+                        <div class="left__side">
+                            <p>2020 &ndash; 2021</p>
+                        </div>
+                        <div class="right__side">
+                            <p>
+                                <b>Zitemedia</b>
+                            </p>
+
+                            <p>
+                                Position: Frontend Developer
+                            </p>
+
+                            <p>
+                                <i>Client web applications in React, Redux and TypeScript.</i>
+                            </p>
+
+                        </div>
+                    </div>
 
                 </div>
             </section>
@@ -128,7 +251,7 @@
 
                 <div class="head">
                     <div class="tabulation"></div>
-                    <div class="title">Languages</div>
+                    <div class="title">Spoken languages</div>
                 </div>
 
                 <div class="section__body">
@@ -138,7 +261,7 @@
                             <p>English</p>
                         </div>
                         <div class="right__side">
-                            <p> <b>Fluent</b> </p>
+                            <p><b>Fluent</b></p>
 
                         </div>
                     </div>
@@ -147,7 +270,7 @@
                             <p>Russian</p>
                         </div>
                         <div class="right__side">
-                            <p> <b> Mother tongue </b> </p>
+                            <p><b>Native</b></p>
 
                         </div>
                     </div>
@@ -156,177 +279,16 @@
                             <p>Czech</p>
                         </div>
                         <div class="right__side">
-                            <p> <b>Conversational </b> </p>
+                            <p><b>Conversational</b></p>
 
                         </div>
                     </div>
                     <div class="block__item">
                         <div class="left__side">
-                            <p> Azer</p>
+                            <p>Azerbaijani</p>
                         </div>
                         <div class="right__side">
-                            <p> <b>Fluent</b> </p>
-
-                        </div>
-                    </div>
-
-
-                </div>
-            </section>
-            <section class="block  experience">
-
-                <div class="head">
-                    <div class="tabulation"></div>
-                    <div class="title">Experience</div>
-                </div>
-
-                <div class="section__body">
-                    <div class="block__item">
-                        <div class="left__side">
-                            <p>2020-now</p>
-                        </div>
-                        <div class="right__side">
-                            <p>
-                                <b> Zitemedia</b>
-                            </p>
-                            
-                            <p>
-
-                                Position: Junior Frontend Developer
-                            </p>
-                            
-                            <p >
-                                    <i>
-                                Zitemedia provides full cycle services to their
-                                costumers by delivering advanced ,turn-key webaplications,
-                                that set industry standarts</i>
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="block__item">
-                        <div class="left__side">
-                            <p>2019–2020</p>
-                        </div>
-                        <div class="right__side">
-                            <p>
-                                <b>La bottega linka</b>
-                            </p>
-                            <p>
-                    
-                                Position: chef de partie
-                            </p>
-                    
-                        </div>
-                    </div>
-
-                    <div class="block__item">
-                        <div class="left__side">
-                            <p>2018–2019</p>
-                        </div>
-                        <div class="right__side">
-                            <p>
-                                <b> Sansho restaurant</b>
-                            </p>
-                            <p>
-
-                                Position: commis
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="block__item">
-                        <div class="left__side">
-                            <p>2017 – 2018</p>
-                        </div>
-                        <div class="right__side">
-                            <p>
-                                <b> Zeytun</b>
-                    
-                            </p>
-                            <p>
-                    
-                                Position: Sous chef
-                            </p>
-                    
-                        </div>
-                    </div>
-                    <div class="block__item">
-                        <div class="left__side">
-                            <p>2015 – 2017</p>
-                        </div>
-                        <div class="right__side">
-                            <p>
-                                <b> Entrie</b>
-
-                            </p>
-                            <p>
-
-                                Position: Bakery Chef
-                            </p>
-
-                        </div>
-                    </div>
-
-
-                </div>
-            </section>
-            <section class="block  education">
-
-                <div class="head">
-                    <div class="tabulation"></div>
-                    <div class="title">Education</div>
-                </div>
-
-                <div class="section__body">
-
-                    <div class="block__item">
-                        <div class="left__side">
-                            <p>2020-2021</p>
-                        </div>
-                        <div class="right__side">
-                            <p>
-                                ITVDN
-                            </p>
-                            <p>
-                                <b>Frontend courses JavaScript</b>
-
-                            </p>
-                            <p>
-                                Final projects: JS part for two web sites: 3d GLO, Repair
-                            
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="block__item">
-                        <div class="left__side">
-                            <p>2017(09-12)</p>
-                        </div>
-                        <div class="right__side">
-                            <p>
-                                ITVDN
-                            </p>
-                            <p>
-                                <b>C# programing language courses</b>
-
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="block__item">
-                        <div class="left__side">
-                            <p>2008-2011</p>
-                        </div>
-                        <div class="right__side">
-                            <p>
-                                Azerbaijan Culinary College
-
-                            </p>
-                            <p>
-                                <b>Faculty of gastronomy and culinary</b>
-
-                            </p>
+                            <p><b>Fluent</b></p>
 
                         </div>
                     </div>
@@ -340,12 +302,6 @@
 
 
     </div>
-
-
-
-
-
-
 </body>
 
 </html>
