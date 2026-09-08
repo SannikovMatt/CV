@@ -181,8 +181,8 @@ p.surname {
 
     body {
         background: #fff;
-        font-size: 9.2pt;
-        line-height: 1.28;
+        font-size: 8.9pt;
+        line-height: 1.25;
     }
 
     .container {
@@ -218,7 +218,7 @@ p.surname {
     }
 
     .skills__description {
-        font-size: 9.4pt;
+        font-size: 9.1pt;
     }
 
     .about__me__info {
