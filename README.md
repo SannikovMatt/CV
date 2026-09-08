@@ -1,26 +1,37 @@
-# CV
+<p align="center">
+  <a href="https://sannikovmatt.github.io/CV/">
+    <img src="src/assets/og-image.png" alt="Dmitriy Sannikov — Senior Software Engineer" width="720">
+  </a>
+</p>
 
-Single-page CV, served at <https://sannikovmatt.github.io/CV/>.
+<p align="center">
+  <a href="https://sannikovmatt.github.io/CV/"><strong>sannikovmatt.github.io/CV</strong></a>
+</p>
 
-## Files
+---
 
-    src/cv.html          the CV itself
-    src/assets/cv.css    styles, including the print/PDF rules
-    src/assets/*.png     phone and envelope icons
+One HTML file and one stylesheet. No framework, no bundler, no dependencies —
+and it prints to exactly one A4 page.
 
-No build step. Open `src/cv.html` in a browser, or serve the folder:
+    src/cv.html          the CV
+    src/assets/cv.css    styles, screen and print
+    src/assets/*.png     icons and the link-preview card
+
+## Run it
+
+Open `src/cv.html` in a browser, or:
 
     python3 -m http.server 8000 --directory src
 
 ## PDF
 
-Open the page and print to PDF. Turn **off** "Headers and footers" in the
-print dialog, otherwise the browser stamps the date and URL on the page.
-The print stylesheet is tuned to fit one A4 page.
+Print the page and save as PDF. Turn **off** "Headers and footers" in the print
+dialog, or the browser stamps the date and URL onto it. The print stylesheet is
+tuned so the whole CV lands on a single A4 page.
 
 ## Deploy
 
-GitHub Pages serves the `gh-pages` branch. To publish a change:
+GitHub Pages serves the `gh-pages` branch:
 
     git worktree add /tmp/ghp gh-pages
     cp src/cv.html /tmp/ghp/index.html
