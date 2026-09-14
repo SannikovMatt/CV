@@ -1,8 +1,17 @@
 .container {
     margin: 0 auto;
-   
+
     max-width: 700px;
     padding: 3% 7% 7%;
+    font-family: "Iowan Old Style", Charter, "Palatino Linotype", Palatino, Georgia, serif;
+    color: #2b3036;
+    line-height: 1.5;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #d8dde2;
+    margin: 10px 0 14px;
 }
 
 
@@ -19,25 +28,28 @@ p{
 
 p.location {
     flex: 1 1 auto;
-    font-family: -webkit-pictograph;
+    font-family: "Iowan Old Style", Charter, "Palatino Linotype", Palatino, Georgia, serif;
     color: #737373;
     font-size: 14px;
 }
 
 p.name {
-    font-size: 25px;
+    font-size: 27px;
+    letter-spacing: -0.01em;
     flex: 0 0 auto;
     text-align: right;
-    font-family: -webkit-pictograph;
-    color: #b9b9b9;
+    font-family: "Iowan Old Style", Charter, "Palatino Linotype", Palatino, Georgia, serif;
+    color: #aeb6bd;
     font-weight: 600;
 }
 
 p.surname {
     flex: 0 0 auto;
-    font-size: 25px;
-    font-family: -webkit-pictograph;
-    color: #737373;
+    font-size: 27px;
+    letter-spacing: -0.01em;
+    font-weight: 600;
+    font-family: "Iowan Old Style", Charter, "Palatino Linotype", Palatino, Georgia, serif;
+    color: #22272c;
     margin-left: 1%;
 }
 
@@ -55,7 +67,7 @@ p.surname {
 .direction {
     font-size: 25px;
     text-align: right;
-    font-family: -webkit-pictograph;
+    font-family: "Iowan Old Style", Charter, "Palatino Linotype", Palatino, Georgia, serif;
     color: #b9b9b9;
     font-weight: 500;
     font-style: italic;
@@ -66,7 +78,7 @@ p.surname {
 
 .contacts{
     flex: 1 1 auto;
-    font-family: -webkit-pictograph;
+    font-family: "Iowan Old Style", Charter, "Palatino Linotype", Palatino, Georgia, serif;
     color: #737373;
     list-style: none;
     margin: 0;
@@ -87,7 +99,7 @@ p.surname {
 }
 
 .skills__description {
-    font-family: -webkit-pictograph;
+    font-family: "Iowan Old Style", Charter, "Palatino Linotype", Palatino, Georgia, serif;
 }
 
 .about__me__info {
@@ -170,6 +182,62 @@ p.surname {
 }
 
 
+
+/* ---------------- detail ---------------- */
+
+.skills__description {
+    line-height: 1.55;
+    color: #3a4147;
+}
+
+/* section rule: thinner, less blunt */
+.tabulation {
+    height: 5px;
+}
+
+.title {
+    letter-spacing: 0.005em;
+    font-weight: 600;
+}
+
+/* labels recede so values lead */
+.left__side p {
+    font-size: 0.86em;
+    color: #7c858d;
+    letter-spacing: 0.02em;
+}
+
+/* company names carry the accent instead of flat black */
+.experience .right__side b {
+    color: #2f6699;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+}
+
+.job-note,
+.right__side i {
+    color: #6c757d;
+}
+
+/* bullets pick up the accent */
+.right__side li::marker {
+    color: #9db6cd;
+}
+
+.right__side li b {
+    color: #22272c;
+}
+
+/* inline svg icons scale with the text and print cleanly */
+.contacts svg {
+    width: 0.95em;
+    height: 0.95em;
+    fill: currentColor;
+    vertical-align: -0.11em;
+    margin-right: 0.45em;
+    opacity: 0.75;
+}
+
 /* ---------------- print / PDF ---------------- */
 
 @page {
@@ -189,6 +257,11 @@ p.surname {
         max-width: none;
         margin: 0;
         padding: 0;
+        line-height: 1.24;
+    }
+
+    .skills__description {
+        line-height: 1.32;
     }
 
     p.name,
