@@ -1,40 +1,22 @@
-<p align="center">
-  <a href="https://sannikovmatt.github.io/CV/">
-    <img src="src/assets/og-image.png" alt="Dmitriy Sannikov — Senior Software Engineer" width="720">
-  </a>
-</p>
+# Dmitriy Sannikov — CV
 
-<p align="center">
-  <a href="https://sannikovmatt.github.io/CV/"><strong>sannikovmatt.github.io/CV</strong></a>
-</p>
+Personal CV and portfolio: https://sannikovmatt.github.io/CV/
 
----
+Design adapted from [Jakhongir Tashpulatov’s CV](https://github.com/bczak/bczak.github.io), at Dmitriy’s request. The content describes Dmitriy’s own work and experience. English edition.
 
-One HTML file and one stylesheet. No framework, no bundler, no dependencies —
-and it prints to exactly one A4 page.
+## Development
 
-    src/cv.html          the CV
-    src/assets/cv.css    styles, screen and print
-    src/assets/*.png     icons and the link-preview card
+```sh
+npm ci
+npm run dev -- --host 0.0.0.0
+npm run build
+npm run preview -- --host 0.0.0.0
+```
 
-## Run it
+Edit `src/content.ts` for career history, projects, skills and copy. `src/main.ts` renders the site and print CV; `src/style.css` retains the reference design. Open `/CV/?print` to inspect the print layout, or use Print CV to save a PDF.
 
-Open `src/cv.html` in a browser, or:
+The existing static CV is retained at `src/cv.html` as an archive. The new site uses Vite with `/CV/` as its deployment base.
 
-    python3 -m http.server 8000 --directory src
+## Deployment
 
-## PDF
-
-Print the page and save as PDF. Turn **off** "Headers and footers" in the print
-dialog, or the browser stamps the date and URL onto it. The print stylesheet is
-tuned so the whole CV lands on a single A4 page.
-
-## Deploy
-
-GitHub Pages serves the `gh-pages` branch:
-
-    git worktree add /tmp/ghp gh-pages
-    cp src/cv.html /tmp/ghp/index.html
-    cp -r src/assets /tmp/ghp/
-    cd /tmp/ghp && git add -A && git commit -m "Deploy updated CV" && git push origin gh-pages
-    cd - && git worktree remove /tmp/ghp
+Build with `npm run build`, then publish the contents of `dist/` to the existing `gh-pages` branch. The website remains unchanged until those files are published. This checkout does not change the repository’s Pages configuration.
