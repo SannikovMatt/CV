@@ -116,6 +116,7 @@ function hero(t: Dict) {
       <div class="hero-cta reveal">
         <a class="btn btn-primary" href="#contact">${svg('send')}${t.hero.contact}</a>
         <button type="button" class="btn btn-ghost" data-print>${svg('printer')}${t.hero.print}</button>
+        <a class="btn btn-ghost" href="${import.meta.env.BASE_URL}classic/">Classic CV / PDF</a>
       </div>
       <p class="hero-meta reveal">${svg('pin')}${t.prague}<span class="sep"></span><a href="${profile.github}" target="_blank" rel="noopener">${svg('github')}github.com/sannikovmatt</a></p>
     </div>
