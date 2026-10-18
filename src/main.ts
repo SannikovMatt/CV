@@ -1,3 +1,4 @@
+import githubActivity from './github-activity.json'
 import '@fontsource-variable/unbounded'
 import '@fontsource-variable/inter'
 import '@fontsource-variable/jetbrains-mono'
@@ -194,6 +195,30 @@ const thymeExtra = `<pre class="code" aria-hidden="true"><span class="k">export 
 })</pre>
 <ul class="modules"><li><b>Gate</b><span>EVM RPC</span></li><li><b>Atlas</b><span>Subgraphs</span></li><li><b>Flow</b><span>Automation</span></li></ul>`
 
+function githubSection() {
+  const colors = ['#191620', '#39265b', '#6541a3', '#9465df', '#c4a5ff']
+  const first = new Date(githubActivity.days[0].date + 'T00:00:00Z')
+  const offset = first.getUTCDay()
+  const weeks = Math.ceil((githubActivity.days.length + offset) / 7)
+  const width = weeks * 16 + 32
+  let month = first.getUTCDate() > 7 ? first.getUTCMonth() : -1
+  const labels: string[] = []
+  const cells = githubActivity.days.map((day, i) => {
+    const date = new Date(day.date + 'T00:00:00Z')
+    const week = Math.floor((i + offset) / 7)
+    if (date.getUTCMonth() !== month && week < weeks - 2) {
+      month = date.getUTCMonth()
+      labels.push(`<text x="${32 + week * 16}" y="12">${date.toLocaleDateString('en', {month: 'short', timeZone: 'UTC'})}</text>`)
+    }
+    return `<rect x="${32 + week * 16}" y="${26 + date.getUTCDay() * 16}" width="12" height="12" rx="3" fill="${colors[day.level]}"><title>${day.date}: ${day.count} contribution${day.count === 1 ? '' : 's'}</title></rect>`
+  }).join('')
+  return `<section class="wrap github-section" aria-labelledby="github-title"><div class="card github-card">
+    <div class="github-heading"><div><p class="eyebrow">${svg('github')} GitHub activity</p><h2 id="github-title">${githubActivity.total.toLocaleString('en')} <span>contributions in the last year</span></h2></div><a class="btn btn-ghost" href="${profile.github}" target="_blank" rel="noopener">View GitHub ${svg('arrow')}</a></div>
+    <div class="github-scroll" tabindex="0" role="region" aria-label="GitHub contribution calendar; scroll horizontally on smaller screens"><svg class="github-calendar" viewBox="0 0 ${width} 140" role="img" aria-labelledby="github-calendar-title"><title id="github-calendar-title">GitHub contribution activity from ${githubActivity.days[0].date} to ${githubActivity.days.at(-1)!.date}. Darker cells show less activity; lighter purple cells show more.</title>${labels.join('')}<text x="0" y="51">M</text><text x="0" y="83">W</text><text x="0" y="115">F</text>${cells}</svg></div>
+    <div class="github-caption"><span>GitHub snapshot · ${githubActivity.updated}</span><span class="github-legend">Less ${colors.map(c=>`<i style="background:${c}"></i>`).join('')} More</span></div>
+  </div></section>`
+}
+
 function projectsSection(t: Dict) {
   return `
 <section class="section wrap" id="projects">
@@ -290,7 +315,7 @@ function footer(t: Dict) {
 }
 
 const screen = (t: Dict, lang: Lang) =>
-  nav(t, lang) + `<main>${hero(t)}${marquee()}${about(t)}${experience(t, lang)}${projectsSection(t)}${stackSection(t)}${background(t)}${contact(t)}</main>` + footer(t)
+  nav(t, lang) + `<main>${hero(t)}${marquee()}${about(t)}${experience(t, lang)}${projectsSection(t)}${githubSection()}${stackSection(t)}${background(t)}${contact(t)}</main>` + footer(t)
 
 /* ---------- print ---------- */
 

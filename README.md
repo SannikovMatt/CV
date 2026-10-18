@@ -20,3 +20,5 @@ The existing static CV is retained at `src/cv.html` as an archive. The new site 
 ## Deployment
 
 Build with `npm run build`, then publish the contents of `dist/` to the existing `gh-pages` branch. The website remains unchanged until those files are published. This checkout does not change the repository’s Pages configuration.
+
+GitHub activity is a dated snapshot refreshed from the public GitHub contribution calendar on each build (`scripts/update-github.mjs`). A failed fetch preserves the last snapshot. The browser makes no external requests for the calendar.

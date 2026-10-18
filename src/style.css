@@ -421,3 +421,16 @@ html.print-preview #print-cv { display: block; width: 210mm; min-height: 297mm; 
   .pcv-projects h3 a, .pcv-projects h3 span { margin-left: .8mm; color: var(--accent); font: 400 6.9pt var(--font-mono); }
   .pcv-projects p { margin-top: .5mm; color: var(--text); font-size: 7.6pt; line-height: 1.4; }
 }
+
+/* GitHub calendar: static data, no runtime requests or animation. */
+.github-section { padding-bottom: 1rem; }
+.github-card { padding: clamp(1.25rem, 3vw, 2rem); }
+.github-heading { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.github-heading h2 { margin-top: .9rem; font: 600 1.6rem/1.4 var(--font-display); }
+.github-heading h2 span { color: var(--color-muted); font: 400 .95rem var(--font-sans); }
+.github-scroll { margin-top: 2rem; overflow-x: auto; scrollbar-color: #6541a3 transparent; }
+.github-calendar { display: block; width: 100%; min-width: 680px; }
+.github-calendar text { fill: var(--color-muted); font: 10px var(--font-mono); }
+.github-caption { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .8rem; margin-top: 1rem; color: var(--color-muted); font: .72rem var(--font-mono); }
+.github-legend { display: inline-flex; align-items: center; gap: 5px; }
+.github-legend i { width: 10px; height: 10px; border-radius: 2px; }
