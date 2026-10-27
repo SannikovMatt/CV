@@ -12,7 +12,7 @@ export type JobId = 'neovate' | 'firstline' | 'junior' | 'zitemedia'
 export const jobs: {id: JobId; org: string; url?: string; from: YM; to?: YM; prague?: boolean}[] = [
   {
     "id": "neovate",
-    "org": "Neovate Digital s.r.o.",
+    "org": "Neovate s.r.o.",
     "url": "https://neovate.dev",
     "from": [
       2025,
